@@ -35,10 +35,10 @@ const Footer = () => {
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex space-y-10 lg:space-y-0 flex-col justify-center lg:flex-row md:justify-between items-center">
           <div className="w-full flex justify-center lg:block">
-            <img src={logoPng} className="w-24" alt="logo" />
+            {/* <img src={logoPng} className="w-24" alt="logo" /> */}
           </div>
           <form className="w-full">
-            <div className="relative ">
+            <div className="relative">
               <label className="sr-only" htmlFor="email">
                 {" "}
                 Email{" "}
@@ -74,7 +74,7 @@ const Footer = () => {
             <h2 className="capitalize font-semibold text-white text-lg">
               why people like us
             </h2>
-            <div className="capitalize mt-6 text-white">
+            <div className="capitalize mt-6 text-white w-3/4 ">
               Gold Sparrow International is a leading export company founded by
               Mr. Hardik Dhankecha in Surat, Gujarat, India with the objective
               of owning the tag of an ideal supplying company on a global
@@ -149,7 +149,7 @@ const Footer = () => {
                 <li>
                   <a className="capitalize transition text-white" href="/">
                     <span className="capitalize text-lg font-semibold">
-                      add :-
+                      address :-
                     </span>{" "}
                     420 , Times Trade Center, opp polaris, parvat patiya to vesu canal rd, surat - 395010
                   </a>

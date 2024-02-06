@@ -136,7 +136,7 @@ const Contact = () => {
               ∘∘∘ Call ∘∘∘
             </div>
             <div className="text-[#626262] font-rubik text-center">
-            9327704700
+             +91 93277 04700
             </div>
             <div className="absolute bottom-0 text-[#626262] rounded-full p-1 shadow-[rgba(0,0,0,0.25)_0px_0px_10px_2px] -mb-3 bg-white">
               <ChevronRightIcon className="w-5 h-5" />

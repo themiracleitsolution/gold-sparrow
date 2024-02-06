@@ -182,7 +182,7 @@ const { tab } = useParams();
             <p className="text-4xl font-rubik font-[600] capitalize text-center md:text-left">
               Deal of the day
             </p>
-            <p className="text-xl font-rubik 2xl:text-2xl w-full text-center md:text-left md:w-3/4">
+            <p className="text-xl font-rubik 2xl:text-2xl w-full text-center md:text-left md:w-2/4">
             Today's exclusive deal: Elevate your kitchen with our premium food powder at an unbeatable price – a daily delight for culinary enthusiasts and exporters alike!
             </p>
             <p className="text-xl font-lora capitalize italic 2xl:text-2xl w-full text-center md:text-left md:w-3/4 font-semibold">

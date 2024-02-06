@@ -149,39 +149,27 @@ const AboutUs = () => {
   const testimonial = [
     {
       image: require("../images/png/testimonial/testi1.png"),
-      description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Quod eos id officiis hic tenetur quae quaerat ad velit ab
-        hic.`,
+      description: `Exceptional quality and variety! Gold Sparrow offers a delightful range of fruit, vegetable, coffee, and tea powders.`,
     },
     {
       image: require("../images/png/testimonial/testi2.png"),
-      description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      Quod eos id officiis hic tenetur quae quaerat ad velit ab
-      hic.`,
+      description: `Gold Sparrow impresses with top-notch fruit, vegetable, coffee, and tea powders, combining exceptional quality.`
     },
     {
       image: require("../images/png/testimonial/testi3.png"),
-      description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      Quod eos id officiis hic tenetur quae quaerat ad velit ab
-      hic.`,
+      description: `Gold Sparrow excels with premium fruit, vegetable, coffee, and tea powders, boasting quality, ethics, and service excellence.`,
     },
     {
       image: require("../images/png/testimonial/testi1.png"),
-      description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Quod eos id officiis hic tenetur quae quaerat ad velit ab
-        hic.`,
+      description: `Gold Sparrow's tea powders excel in flavor diversity, quality sourcing, and a delightful brewing experience.`,
     },
     {
       image: require("../images/png/testimonial/testi2.png"),
-      description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      Quod eos id officiis hic tenetur quae quaerat ad velit ab
-      hic.`,
+      description: ` Gold Sparrow crafts exceptional coffee powders, delivering rich flavor, ethically sourced beans, and brewing perfection.`,
     },
     {
       image: require("../images/png/testimonial/testi3.png"),
-      description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      Quod eos id officiis hic tenetur quae quaerat ad velit ab
-      hic.`,
+      description: `Gold Sparrow offers vibrant fruit powders, a burst of natural sweetness, and ethically sourced goodness.`,
     },
   ];
   const certificate = [
@@ -239,16 +227,24 @@ const AboutUs = () => {
               about us
             </h1>
             <h1 className="capitalize font-rubik font-semibold title-font text-2xl md:text-3xl mb-4">
-            Welcome to gold sparrow Global
+              Welcome to gold sparrow
             </h1>
             <p className="mb-8 leading-relaxed font-rubik text-[#626262]">
-            Gold Sparrow International is a leading export company founded by Mr. Hardik Dhankecha in Surat, Gujarat, India with the objective of
-owning the tag of an ideal supplying company on a global platform.
+            Gold Sparrow International is a leading export company founded by Mr. Hardik Dhankecha in Surat, Gujarat, India with the objective of 
+            owning the tag of an ideal supplying company on a global platform.
             </p>
             <p className="mb-8 leading-relaxed font-rubik text-[#626262]">
-            Gold Sparrow International is also engaged in service the overseas buyers by delivering the cargo at their home port.we are acting as a
-represen tative for the setting-up business of our clients in india.in this way, our clients are getting the benefits of our experienced
-industry professionals in clinching the best deals with full compliance of their requirements.
+            Gold Sparrow International is also engaged in service the overseas buyers by delivering the cargo at their home port.we are acting 
+            as a represen tative for the setting-up business of our clients in india.in this way, our clients are getting 
+            the benefits of our experienced industry professionals in clinching the best deals with full compliance of their requirements.
+            </p>
+            <p className="mb-8 leading-relaxed font-rubik text-[#626262]">
+            Our business has been inspired by the government initiative and vision towards ‘helping the import-export sector’ to reach new heights of success and appreciation. 
+            While innovation forms the essence of every creation at Gold Sparrow International, we ensure that we don’t compromise on quality.
+            </p>
+            <p className="mb-8 leading-relaxed font-rubik text-[#626262]">
+            In all nations, Gold Sparrow International enjoys priority access to the export. We guarantee to accomplish your task, whether it’s in Europe, the Middle East, the United States, or wherever else you wish to export your food we serve it all.
+Gold Sparrow International also has experience organizing clients for you in other countries so that you may export your food product with convenience and efficiency.
             </p>
           </div>
         </div>
@@ -285,7 +281,7 @@ industry professionals in clinching the best deals with full compliance of their
         </div>
         <div className="flex justify-center text-center w-full text-[#626262] mt-6 text-md md:text-lg md:mt-4">
           <span className="w-full md:w-2/4 capitalize font-rubik">
-          Hear what our satisfied customers are saying – testimonials that speak volumes about the exceptional quality and service we provide.
+          Discover what our delighted customers are saying, a testament to the excellence we bring to every experience.
           </span>
         </div>
       </div>

@@ -123,7 +123,7 @@ const Header = () => {
               pathname.includes("contact") && "text-[#F1931F]"
             }`}
           >
-            CONTACT
+            CONTACT US
           </Link>
           {/* <Link
             to="/blog"

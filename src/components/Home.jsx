@@ -199,39 +199,27 @@ const Home = () => {
   const testimonial = [
     {
       image: require("../images/png/testimonial/testi1.png"),
-      description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Quod eos id officiis hic tenetur quae quaerat ad velit ab
-        hic.`,
+      description: `Exceptional quality and variety! Gold Sparrow offers a delightful range of fruit, vegetable, coffee, and tea powders.`,
     },
     {
       image: require("../images/png/testimonial/testi2.png"),
-      description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      Quod eos id officiis hic tenetur quae quaerat ad velit ab
-      hic.`,
+      description: `Gold Sparrow impresses with top-notch fruit, vegetable, coffee, and tea powders, combining exceptional quality.`
     },
     {
       image: require("../images/png/testimonial/testi3.png"),
-      description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      Quod eos id officiis hic tenetur quae quaerat ad velit ab
-      hic.`,
+      description: `Gold Sparrow excels with premium fruit, vegetable, coffee, and tea powders, boasting quality, ethics, and service excellence.`,
     },
     {
       image: require("../images/png/testimonial/testi1.png"),
-      description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Quod eos id officiis hic tenetur quae quaerat ad velit ab
-        hic.`,
+      description: `Gold Sparrow's tea powders excel in flavor diversity, quality sourcing, and a delightful brewing experience.`,
     },
     {
       image: require("../images/png/testimonial/testi2.png"),
-      description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      Quod eos id officiis hic tenetur quae quaerat ad velit ab
-      hic.`,
+      description: ` Gold Sparrow crafts exceptional coffee powders, delivering rich flavor, ethically sourced beans, and brewing perfection.`,
     },
     {
       image: require("../images/png/testimonial/testi3.png"),
-      description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      Quod eos id officiis hic tenetur quae quaerat ad velit ab
-      hic.`,
+      description: `Gold Sparrow offers vibrant fruit powders, a burst of natural sweetness, and ethically sourced goodness.`,
     },
   ];
   const certificate = [
@@ -415,8 +403,8 @@ const Home = () => {
             <p className="text-4xl font-rubik font-[600] capitalize text-center md:text-left">
               Deal of the day
             </p>
-            <p className="text-xl font-rubik 2xl:text-2xl w-full text-center md:text-left md:w-3/4">
-            Today's exclusive deal: Elevate your kitchen with our premium food powder at an unbeatable price – a daily delight for culinary enthusiasts and exporters alike!
+            <p className="text-xl font-rubik 2xl:text-2xl w-full text-center md:text-left md:w-2/4">
+            Today's exclusive deal: Elevate your kitchen with our premium food powder at an unbeatable price a daily delight for culinary enthusiasts and exporters alike!
             </p>
             <p className="text-xl font-lora capitalize italic 2xl:text-2xl w-full text-center md:text-left md:w-3/4 font-semibold">
               beetroot powder
