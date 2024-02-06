@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lora");
+
+.ind {
+  width: 15px;
+  height: 15px;
+  list-style: none;
+  background-color: #f1931f;
+  border-radius: 100%;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+
+.slick-active .ind {
+  background-color: #fec073;
+}
+
+.ind:not(:last-child) {
+  margin-right: 0.8rem;
+}
+.slick-dots {
+  position: relative !important;
+  bottom: 0px !important;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+.slick-arrow::before {
+  content: "" !important;
+}
+.slick-arrow.bg-white.rounded-md.shadow-\[rgba\(0\,0\,0\,0\.25\)_0px_0px_10px_2px\] {
+  width: 30px;
+  height: 30px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
