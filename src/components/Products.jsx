@@ -183,8 +183,7 @@ const { tab } = useParams();
               Deal of the day
             </p>
             <p className="text-xl font-rubik 2xl:text-2xl w-full text-center md:text-left md:w-3/4">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry
+            Today's exclusive deal: Elevate your kitchen with our premium food powder at an unbeatable price – a daily delight for culinary enthusiasts and exporters alike!
             </p>
             <p className="text-xl font-lora capitalize italic 2xl:text-2xl w-full text-center md:text-left md:w-3/4 font-semibold">
               beetroot powder

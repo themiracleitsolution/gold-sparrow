@@ -57,8 +57,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="flex font-rubik justify-center text-center w-full text-[#626262] mt-6 text-md md:text-lg md:mt-4">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry
+          Wherever you are, we're there for you – delivering quality and convenience wherever you need us.
           </div>
         </div>
         <div className="lg:px-8">
@@ -92,6 +91,12 @@ const Contact = () => {
                 className="appearance-none w-full focus:outline-none border border-[#D9D9D9] text-[#626262] rounded-3xl p-5 col-span-1 sm:col-span-2 min-h-32"
                 placeholder="Write Message Here"
               />
+              <button
+                    type="submit"
+                    className="bg-[#F1931F] rounded-full items-center text-white p-2 px-4 font-mono font-bold tracking-widest mt-8 w-fit"
+                  >
+                    Contact Us
+                  </button>
             </div>
           </div>
           <div className="w-full lg:w-5/12">
@@ -104,10 +109,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="w-full font-rubik text-[#626262] mt-6 text-sm md:text-md md:mt-4">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the, when unknown printer took a galley of type and
-              scrambled it to make a type specimen book
+            Feel free to contact us whenever you need assistance or have questions. Our dedicated customer support team is ready to provide detailed information, address your concerns, and ensure that your experience with us is seamless. Your satisfaction is our utmost priority, and we are committed to helping you every step of the way.
             </div>
           </div>
         </div>
@@ -120,7 +122,7 @@ const Contact = () => {
               ∘∘∘ Email ∘∘∘
             </div>
             <div className="text-[#626262] font-rubik text-center">
-              abcd@gamil.com
+            Goldsparrowgloballlp@gmail.com
             </div>
             <div className="absolute bottom-0 text-[#626262] rounded-full p-1 shadow-[rgba(0,0,0,0.25)_0px_0px_10px_2px] -mb-3 bg-white">
               <ChevronRightIcon className="w-5 h-5" />
@@ -134,7 +136,7 @@ const Contact = () => {
               ∘∘∘ Call ∘∘∘
             </div>
             <div className="text-[#626262] font-rubik text-center">
-              (+85) 12345 67890
+            9327704700
             </div>
             <div className="absolute bottom-0 text-[#626262] rounded-full p-1 shadow-[rgba(0,0,0,0.25)_0px_0px_10px_2px] -mb-3 bg-white">
               <ChevronRightIcon className="w-5 h-5" />
@@ -148,7 +150,7 @@ const Contact = () => {
               ∘∘∘ Visit Us ∘∘∘
             </div>
             <div className="text-[#626262] font-rubik text-center">
-              123, Brooklyn Rode 500 New York
+            420 , Times Trade Center, opp polaris, parvat patiya to vesu canal rd, surat - 395010
             </div>
             <div className="absolute bottom-0 text-[#626262] rounded-full p-1 shadow-[rgba(0,0,0,0.25)_0px_0px_10px_2px] -mb-3 bg-white">
               <ChevronRightIcon className="w-5 h-5" />

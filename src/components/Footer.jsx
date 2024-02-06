@@ -151,7 +151,7 @@ const Footer = () => {
                     <span className="capitalize text-lg font-semibold">
                       add :-
                     </span>{" "}
-                    123, mall punagam surat
+                    420 , Times Trade Center, opp polaris, parvat patiya to vesu canal rd, surat - 395010
                   </a>
                 </li>
                 <li>
@@ -159,7 +159,7 @@ const Footer = () => {
                     <span className="capitalize text-lg font-semibold">
                       email :-
                     </span>{" "}
-                    info@goldsparrow.co
+                    Goldsparrowgloballlp@gmail.com
                   </a>
                 </li>
                 <li>
@@ -167,7 +167,7 @@ const Footer = () => {
                     <span className="capitalize text-lg font-semibold">
                       phone :-
                     </span>{" "}
-                    +91 98796 37781
+                    +91 93277 04700
                   </a>
                 </li>
               </ul>

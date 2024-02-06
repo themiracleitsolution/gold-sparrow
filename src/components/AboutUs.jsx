@@ -239,22 +239,16 @@ const AboutUs = () => {
               about us
             </h1>
             <h1 className="capitalize font-rubik font-semibold title-font text-2xl md:text-3xl mb-4">
-              Organic powder:
+            Welcome to gold sparrow Global
             </h1>
             <p className="mb-8 leading-relaxed font-rubik text-[#626262]">
-              Lorem Ipsum is simply dummy text of the printing and Lorem Ipsum
-              is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since
-              the when an unknown printer took a galley of type and scrambled it
-              to make a type specimen book. It has survived not only five
-              centuries, but also the leap into electronic typesetting,
-              remaining essentially unchanged
+            Gold Sparrow International is a leading export company founded by Mr. Hardik Dhankecha in Surat, Gujarat, India with the objective of
+owning the tag of an ideal supplying company on a global platform.
             </p>
             <p className="mb-8 leading-relaxed font-rubik text-[#626262]">
-              It was popularised in the 1960s with the release of Letraset
-              sheets conta Lorem Ipsum passages, and more recently with desktop
-              publishing softwa like Aldus PageMaker including versions of Lorem
-              Ipsum
+            Gold Sparrow International is also engaged in service the overseas buyers by delivering the cargo at their home port.we are acting as a
+represen tative for the setting-up business of our clients in india.in this way, our clients are getting the benefits of our experienced
+industry professionals in clinching the best deals with full compliance of their requirements.
             </p>
           </div>
         </div>
@@ -291,7 +285,7 @@ const AboutUs = () => {
         </div>
         <div className="flex justify-center text-center w-full text-[#626262] mt-6 text-md md:text-lg md:mt-4">
           <span className="w-full md:w-2/4 capitalize font-rubik">
-            Lorem Ipsum is simply dummy text of the printing and
+          Hear what our satisfied customers are saying – testimonials that speak volumes about the exceptional quality and service we provide.
           </span>
         </div>
       </div>

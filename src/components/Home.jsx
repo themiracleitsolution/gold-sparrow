@@ -416,8 +416,7 @@ const Home = () => {
               Deal of the day
             </p>
             <p className="text-xl font-rubik 2xl:text-2xl w-full text-center md:text-left md:w-3/4">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry
+            Today's exclusive deal: Elevate your kitchen with our premium food powder at an unbeatable price – a daily delight for culinary enthusiasts and exporters alike!
             </p>
             <p className="text-xl font-lora capitalize italic 2xl:text-2xl w-full text-center md:text-left md:w-3/4 font-semibold">
               beetroot powder
@@ -485,7 +484,7 @@ const Home = () => {
         </div>
         <div className="flex justify-center text-center w-full text-[#626262] mt-6 text-md md:text-lg md:mt-4">
           <span className="w-full md:w-2/4 capitalize font-rubik">
-            Lorem Ipsum is simply dummy text of the printing and
+          Hear what our satisfied customers are saying – testimonials that speak volumes about the exceptional quality and service we provide.
           </span>
         </div>
       </div>
@@ -534,9 +533,7 @@ const Home = () => {
             </div>
             <div className="w-full text-center md:text-left">
               <p className="px-5 md:px-0 md:w-2/5 font-rubik">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the
+              Elevate your fitness journey with our natural, raw, and organic protein powders – the perfect blend for a healthier you.
               </p>
             </div>
           </div>
@@ -550,8 +547,7 @@ const Home = () => {
                   Plant-based Proteins
                 </h2>
                 <p className="leading-relaxed font-rubik text-base md:w-2/5">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
+                Fuel your vitality with our plant-based proteins, a natural choice for a healthier and sustainable lifestyle.
                 </p>
               </div>
             </div>
@@ -564,8 +560,7 @@ const Home = () => {
                   mixability and texture
                 </h2>
                 <p className="leading-relaxed font-rubik text-base md:w-2/5">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
+                Experience perfection in every sip with our protein powders, known for impeccable mixability and velvety-smooth texture.
                 </p>
               </div>
             </div>
