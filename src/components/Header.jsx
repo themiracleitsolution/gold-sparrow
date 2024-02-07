@@ -1,11 +1,5 @@
 import React, { useState } from "react";
 import logoPng from "../images/png/logo.png";
-// import searchPng from "../images/png/search.png";
-// import settingPng from "../images/png/setting.png";
-// import shopBagPng from "../images/png/shop-bag.png";
-// import facebookSvg from "../images/svg/facebook.svg";
-// import mailSvg from "../images/svg/mail.svg";
-// import linkedinSvg from "../images/svg/linkedin.svg";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import {
   IconBrandFacebookFilled,
@@ -23,37 +17,14 @@ const Header = () => {
   const [openProduct, setOpenProduct] = useState(false);
   const pathname = useLocation().pathname;
   return (
+    // <div className="sticky top-0 z-50 shadow-md">
     <div>
-      {/* <div className="bg-white p-5  flex justify-center items-center gap-4 lg:px-20">
-        <div className="w-full flex gap-4">
-          <div
-            onClick={() => setSidebar(!sidebar)}
-            className="lg:hidden bg-[#F1931F] rounded-full p-1 flex justify-center items-center shadow-md shadow-gray-400"
-          >
-            <Bars3Icon className="w-8 h-8 text-white" />
-          </div>
-          <div className="bg-[#F1931F] rounded-full p-1 w-10 h-10 flex justify-center items-center shadow-md shadow-gray-400">
-            <img src={searchPng} alt="search" />
-          </div>
-        </div>
-        <div className="h-full py-1 w-full flex justify-center">
-          <img src={logoPng} alt="logo" className="w-24" />
-        </div>
-        <div className="flex gap-4 w-full justify-end">
-          <div className="bg-[#F1931F] rounded-full p-1 w-10 h-10 flex justify-center items-center shadow-md shadow-gray-400">
-            <img src={settingPng} alt="search" />
-          </div>
-          <div className="bg-[#F1931F] rounded-full p-1 w-10 h-10 flex justify-center items-center shadow-md shadow-gray-400">
-            <img src={shopBagPng} alt="search" />
-          </div>
-        </div>
-      </div> */}
       <div className="lg:flex bg-[#FFCF9F] p-4 w-full gap-2 justify-between items-center lg:px-20">
         <div className="flex justify-between items-center lg:block">
           <div className="h-full py-1">
-            <a href="/">
+            <Link to="/">
               <img src={logoPng} alt="logo" className="w-24" />
-            </a>
+            </Link>
           </div>
           <div className="">
             <div
@@ -99,7 +70,7 @@ const Header = () => {
                 to="/products/fruits"
                 className="py-2 block my-1 font-semibold text-[#F1931F] hover:text-white hover:bg-[#F1931F] md:px-4"
               >
-                Fruit
+                FRUIT
               </Link>
               <Link
                 to="/products/coffee"

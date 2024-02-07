@@ -5,17 +5,10 @@ import { ProductData } from "../data/product";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import ProductBanner from "../images/png/products/product-banner.jpg";
 import bannerAll from "../images/png/products/product-all-banner.jpg";
-import bannerVegetable from "../images/png/products/product-vegetable-banner.jpg";
-import bannerFruit from "../images/png/products/product-fruit-banner.jpg";
-import bannerTea from "../images/png/products/product-tea-banner.jpg";
-import bannerCoffee from "../images/png/products/product-coffee-banner.jpg";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const Products = () => {
-    const navigate = useNavigate();
-const { tab } = useParams();
+  const navigate = useNavigate();
+  const { tab } = useParams();
   const activeTab = tab;
   const [search, setSearch] = useState("");
   const [bannerInd, setBannerInd] = useState(0);
@@ -38,31 +31,12 @@ const { tab } = useParams();
       <div className={`ind ${bannerInd === i ? "active" : ""}`}></div>
     ),
   };
-  const bannerImgArr =
-    activeTab === "vegetables"
-      ? [bannerVegetable, bannerVegetable, bannerVegetable]
-      : activeTab === "fruits"
-      ? [bannerFruit, bannerFruit, bannerFruit]
-      : activeTab === "tea"
-      ? [bannerTea, bannerTea, bannerTea]
-      : activeTab === "coffee"
-      ? [bannerCoffee, bannerCoffee, bannerCoffee]
-      : [bannerAll, bannerAll, bannerAll];
-  const banner = useMemo(
-    () => (
-      <Slider {...bannerSetting}>
-        {bannerImgArr.map((v, i) => (
-          <div key={i}>
-            <img src={bannerAll} alt="banner w-full" />
-          </div>
-        ))}
-      </Slider>
-    ),
-    [activeTab]
-  );
+ 
   return (
     <div className="space-y-20 mb-20">
-      {banner}
+      <div>
+        <img src={bannerAll} alt="banner w-full" />
+      </div>
       <div className="px-10 lg:px-20 space-y-14">
         <div className="flex flex-col items-center w-full gap-6">
           <div className="max-w-[600px] w-full border-b border-[#626262] flex gap-2 items-center pb-2">
@@ -78,52 +52,47 @@ const { tab } = useParams();
           <div className="max-w-[700px] w-full flex gap-2 items-center justify-between overflow-x-auto">
             <Link
               to="/products/all"
-              className={`px-4 font-lora font-[600] cursor-pointer font-serif italic ${
-                activeTab === "all"
+              className={`px-4 font-lora font-[600] cursor-pointer font-serif italic ${activeTab === "all"
                   ? "rounded-full text-white bg-[#F1931F]"
                   : "text-[#F1931F]"
-              }`}
-              >
+                }`}
+            >
               All
             </Link>
             <Link
               to="/products/vegetables"
-              className={`px-4 font-lora font-[600] cursor-pointer font-serif italic ${
-                activeTab === "vegetables"
+              className={`px-4 font-lora font-[600] cursor-pointer font-serif italic ${activeTab === "vegetables"
                   ? "rounded-full text-white bg-[#F1931F]"
                   : "text-[#F1931F]"
-              }`}
-                          >
+                }`}
+            >
               Vegetables
             </Link>
             <Link
               to="/products/tea"
-              className={`px-4 font-lora font-[600] cursor-pointer font-serif italic ${
-                activeTab === "tea"
+              className={`px-4 font-lora font-[600] cursor-pointer font-serif italic ${activeTab === "tea"
                   ? "rounded-full text-white bg-[#F1931F]"
                   : "text-[#F1931F]"
-              }`}
-              >
+                }`}
+            >
               Tea
             </Link>
             <Link
               to="/products/fruits"
-              className={`px-4 font-lora font-[600] cursor-pointer font-serif italic ${
-                activeTab === "fruits"
+              className={`px-4 font-lora font-[600] cursor-pointer font-serif italic ${activeTab === "fruits"
                   ? "rounded-full text-white bg-[#F1931F]"
                   : "text-[#F1931F]"
-              }`}
-                          >
+                }`}
+            >
               Fruit
             </Link>
             <Link
               to="/products/coffee"
-              className={`px-4 font-lora font-[600] cursor-pointer font-serif italic ${
-                activeTab === "coffee"
+              className={`px-4 font-lora font-[600] cursor-pointer font-serif italic ${activeTab === "coffee"
                   ? "rounded-full text-white bg-[#F1931F]"
                   : "text-[#F1931F]"
-              }`}
-                          >
+                }`}
+            >
               Coffee
             </Link>
           </div>
@@ -138,18 +107,26 @@ const { tab } = useParams();
             return (
               <div key={ind} className="md:max-w-48">
                 <img
-                  src={product.img}
+                  onClick={() => {
+                    navigate(
+                      `/products/${product.type}/${product.name
+                        .toLowerCase()
+                        .replaceAll(" ", "-")}`
+                    );
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  src={product.cardImage}
                   alt={product.name}
                   className="w-full md:w-48 rounded-2xl shadow-[rgba(0,0,0,0.25)_0px_0px_10px_2px]"
                 />
-                <div className="mt-6 flex gap-0.5">
+                <div className="mt-6 flex justify-center gap-0.5">
                   <StarIcon className="w-3 h-3 text-[#FF972B]" />
                   <StarIcon className="w-3 h-3 text-[#FF972B]" />
                   <StarIcon className="w-3 h-3 text-[#FF972B]" />
                   <StarIcon className="w-3 h-3 text-[#FF972B]" />
                   <StarIcon className="w-3 h-3 text-[#FF972B]" />
                 </div>
-                <div className="font-rubik capitalize text-sm text-[#626262] mt-2">
+                <div className="font-rubik text-center capitalize text-sm text-[#626262] mt-2">
                   {product.name}
                 </div>
                 <div
@@ -161,7 +138,7 @@ const { tab } = useParams();
                     );
                     window.scrollTo({ top: 0, behavior: "smooth" });
                   }}
-                  className="text-sm font-lora italic text-[#626262] mt-4 text-center w-full rounded-xl border border-[#D9D9D9] p-2 cursor-pointer"
+                  className="text-smflex justify-center font-lora italic text-[#626262] mt-4 text-center w-full rounded-xl border border-[#D9D9D9] p-2 cursor-pointer"
                 >
                   Quick View
                 </div>
@@ -183,7 +160,9 @@ const { tab } = useParams();
               Deal of the day
             </p>
             <p className="text-xl font-rubik 2xl:text-2xl w-full text-center md:text-left md:w-2/4">
-            Today's exclusive deal: Elevate your kitchen with our premium food powder at an unbeatable price – a daily delight for culinary enthusiasts and exporters alike!
+              Today's exclusive deal: Elevate your kitchen with our premium food
+              powder at an unbeatable price – a daily delight for culinary
+              enthusiasts and exporters alike!
             </p>
             <p className="text-xl font-lora capitalize italic 2xl:text-2xl w-full text-center md:text-left md:w-3/4 font-semibold">
               beetroot powder

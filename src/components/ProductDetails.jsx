@@ -88,14 +88,14 @@ const ProductDetails = () => {
 
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_PRODUCT_TEMPLATE_ID,
         form.current,
-        "YOUR_PUBLIC_KEY"
+        process.env.REACT_APP_PUBLIC_KEY
       )
       .then(
         () => {
-          console.log("SUCCESS!");
+          window.location.reload();
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -125,7 +125,7 @@ const ProductDetails = () => {
                 {product.name}
               </div>
             </div>
-            <div className="font-lora italic">{product.content}</div>
+            <div className=" font-lora italic">{product.content}</div>
             <div
               className="px-6 font-lora italic font-[600] cursor-pointer bg-black rounded-full py-2 w-fit text-white"
               onClick={() => setEnquiryPopUp(true)}
@@ -151,22 +151,30 @@ const ProductDetails = () => {
               {ProductData.filter(
                 (v) => v.type.includes(product.type) && v.id !== product.id
               ).map((product, ind) => (
-                <div key={ind}>
+                <div key={ind} className="p-4">
                   <div className="flex justify-center w-full mt-4">
                     <div className="md:max-w-48">
                       <img
-                        src={product.img}
+                      onClick={() => {
+                        navigate(
+                          `/products/${product.type}/${product.name
+                            .toLowerCase()
+                            .replaceAll(" ", "-")}`
+                        );
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                        src={product.cardImage}
                         alt={product.name}
                         className="w-full md:w-48 rounded-2xl shadow-[rgba(0,0,0,0.25)_0px_0px_10px_2px]"
                       />
-                      <div className="mt-6 flex gap-0.5">
+                      <div className="mt-6 flex justify-center gap-0.5">
                         <StarIcon className="w-3 h-3 text-[#FF972B]" />
                         <StarIcon className="w-3 h-3 text-[#FF972B]" />
                         <StarIcon className="w-3 h-3 text-[#FF972B]" />
                         <StarIcon className="w-3 h-3 text-[#FF972B]" />
                         <StarIcon className="w-3 h-3 text-[#FF972B]" />
                       </div>
-                      <div className="font-rubik capitalize text-sm text-[#626262] mt-2">
+                      <div className="font-rubik text-center capitalize text-sm text-[#626262] mt-2">
                         {product.name}
                       </div>
                       <div
@@ -178,7 +186,7 @@ const ProductDetails = () => {
                           );
                           window.scrollTo({ top: 0, behavior: "smooth" });
                         }}
-                        className="text-sm font-lora italic text-[#626262] mt-4 text-center w-full rounded-xl border border-[#D9D9D9] p-2 cursor-pointer"
+                        className="text-sm flex justify-center font-lora italic text-[#626262] mt-4 text-center w-full rounded-xl border border-[#D9D9D9] p-2 cursor-pointer"
                       >
                         Quick View
                       </div>
@@ -217,6 +225,12 @@ const ProductDetails = () => {
                   onSubmit={sendEmail}
                   className="w-full lg:pl-8 flex flex-col gap-4 items-center"
                 >
+                  <input
+                    type="text"
+                    name="product_name"
+                    className="sr-only"
+                    value={product.name}
+                  />
                   <input
                     type="text"
                     name="name"

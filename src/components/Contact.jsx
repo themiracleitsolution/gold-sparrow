@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import Slider from "react-slick";
+import React, { useRef, useState } from "react";
 import bannerContact from "../images/png/contact/contact-banner.jpg";
 import mapContact from "../images/png/contact/map.jpg";
 import {
@@ -9,43 +8,37 @@ import {
   UserIcon,
 } from "@heroicons/react/24/outline";
 import { IconPhoneCall } from "@tabler/icons-react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   const [bannerInd, setBannerInd] = useState(0);
-  var bannerSetting = {
-    dots: true,
-    infinite: false,
-    arrows: false,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    afterChange: (current) => setBannerInd(current),
-    appendDots: (dots) => (
-      <div className="!relative">
-        <ul className="absolute bottom-5 md:bottom-8 flex justify-center w-full">
-          {dots}
-        </ul>
-      </div>
-    ),
-    customPaging: (i) => (
-      <div className={`ind ${bannerInd === i ? "active" : ""}`}></div>
-    ),
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_CONTACT_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          window.location.reload();
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
   };
   return (
     <div className="space-y-20 mb-28">
-      <Slider {...bannerSetting}>
-        <div>
-          <img src={bannerContact} alt="banner w-full" />
-        </div>
-        <div>
-          <img src={bannerContact} alt="banner w-full" />
-        </div>
-        <div>
-          <img src={bannerContact} alt="banner w-full" />
-        </div>
-      </Slider>
+      <div>
+        <img src={bannerContact} alt="banner w-full" />
+      </div>
       <div className="px-10 lg:px-20 space-y-6">
         <div className="my-10  sm:my-14 md:my-20">
           <div className="capitalize font-lora italic text-xl text-[#F1931F] font-[600] flex justify-center">
@@ -57,7 +50,8 @@ const Contact = () => {
             </div>
           </div>
           <div className="flex font-rubik justify-center text-center w-full text-[#626262] mt-6 text-md md:text-lg md:mt-4">
-          Wherever you are, we're there for you – delivering quality and convenience wherever you need us.
+            Wherever you are, we're there for you – delivering quality and
+            convenience wherever you need us.
           </div>
         </div>
         <div className="lg:px-8">
@@ -65,39 +59,55 @@ const Contact = () => {
         </div>
         <div className="flex flex-wrap lg:flex-nowrap gap-6">
           <div className="w-full">
-            <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4"
+            >
               <input
                 type="text"
+                name="name"
                 className="appearance-none w-full focus:outline-none border border-[#D9D9D9] text-[#626262] rounded-full p-5"
                 placeholder="Your Name"
+                required
               />
               <input
-                type="text"
+                type="email"
+                name="email"
                 className="appearance-none w-full focus:outline-none border border-[#D9D9D9] text-[#626262] rounded-full p-5"
                 placeholder="Your Email"
+                required
               />
               <input
                 type="text"
+                name="phone_number"
                 className="appearance-none w-full focus:outline-none border border-[#D9D9D9] text-[#626262] rounded-full p-5"
                 placeholder="Your Phone"
+                minLength={10}
+                maxLength={10}
+                required
               />
               <input
                 type="text"
+                name="subject"
                 className="appearance-none w-full focus:outline-none border border-[#D9D9D9] text-[#626262] rounded-full p-5"
                 placeholder="Subject"
+                required
               />
               <textarea
                 type="text"
+                name="message"
                 className="appearance-none w-full focus:outline-none border border-[#D9D9D9] text-[#626262] rounded-3xl p-5 col-span-1 sm:col-span-2 min-h-32"
                 placeholder="Write Message Here"
+                required
               />
               <button
-                    type="submit"
-                    className="bg-[#F1931F] rounded-full items-center text-white p-2 px-4 font-mono font-bold tracking-widest mt-8 w-fit"
-                  >
-                    Contact Us
-                  </button>
-            </div>
+                type="submit"
+                className="bg-[#F1931F] rounded-full items-center text-white p-2 px-4 font-mono font-bold tracking-widest mt-8 w-fit"
+              >
+                Contact Us
+              </button>
+            </form>
           </div>
           <div className="w-full lg:w-5/12">
             <div className="capitalize font-lora italic text-xl text-[#F1931F] font-[600]">
@@ -109,7 +119,12 @@ const Contact = () => {
               </div>
             </div>
             <div className="w-full font-rubik text-[#626262] mt-6 text-sm md:text-md md:mt-4">
-            Feel free to contact us whenever you need assistance or have questions. Our dedicated customer support team is ready to provide detailed information, address your concerns, and ensure that your experience with us is seamless. Your satisfaction is our utmost priority, and we are committed to helping you every step of the way.
+              Feel free to contact us whenever you need assistance or have
+              questions. Our dedicated customer support team is ready to provide
+              detailed information, address your concerns, and ensure that your
+              experience with us is seamless. Your satisfaction is our utmost
+              priority, and we are committed to helping you every step of the
+              way.
             </div>
           </div>
         </div>
@@ -122,7 +137,7 @@ const Contact = () => {
               ∘∘∘ Email ∘∘∘
             </div>
             <div className="text-[#626262] font-rubik text-center">
-            Goldsparrowgloballlp@gmail.com
+              Goldsparrowgloballlp@gmail.com
             </div>
             <div className="absolute bottom-0 text-[#626262] rounded-full p-1 shadow-[rgba(0,0,0,0.25)_0px_0px_10px_2px] -mb-3 bg-white">
               <ChevronRightIcon className="w-5 h-5" />
@@ -136,7 +151,7 @@ const Contact = () => {
               ∘∘∘ Call ∘∘∘
             </div>
             <div className="text-[#626262] font-rubik text-center">
-             +91 93277 04700
+              +91 93277 04700
             </div>
             <div className="absolute bottom-0 text-[#626262] rounded-full p-1 shadow-[rgba(0,0,0,0.25)_0px_0px_10px_2px] -mb-3 bg-white">
               <ChevronRightIcon className="w-5 h-5" />
@@ -150,7 +165,8 @@ const Contact = () => {
               ∘∘∘ Visit Us ∘∘∘
             </div>
             <div className="text-[#626262] font-rubik text-center">
-            420 , Times Trade Center, opp polaris, parvat patiya to vesu canal rd, surat - 395010
+              420 , Times Trade Center, opp polaris, parvat patiya to vesu canal
+              rd, surat - 395010
             </div>
             <div className="absolute bottom-0 text-[#626262] rounded-full p-1 shadow-[rgba(0,0,0,0.25)_0px_0px_10px_2px] -mb-3 bg-white">
               <ChevronRightIcon className="w-5 h-5" />

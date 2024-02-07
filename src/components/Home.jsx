@@ -63,25 +63,6 @@ const Home = () => {
       },
     ],
   };
-  var bannerSetting = {
-    dots: true,
-    infinite: false,
-    arrows: false,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    afterChange: (current) => setBannerInd(current),
-    appendDots: (dots) => (
-      <div className="!relative">
-        <ul className="absolute bottom-5 md:bottom-8 flex justify-center w-full">
-          {dots}
-        </ul>
-      </div>
-    ),
-    customPaging: (i) => (
-      <div className={`ind ${bannerInd === i ? "active" : ""}`}></div>
-    ),
-  };
   var certificateSetting = {
     dots: true,
     infinite: false,
@@ -161,8 +142,8 @@ const Home = () => {
     },
     {
       image: require("../images/png/exlusive-product/tomato.png"),
-      name: "tomato",
-      link: "/products/vegetables/spray-dried-onion-powder",
+      name: "papaya",
+      link: "/products/fruits/spray-dried-papaya-powder",
     },
   ];
   const services = [
@@ -203,7 +184,7 @@ const Home = () => {
     },
     {
       image: require("../images/png/testimonial/testi2.png"),
-      description: `Gold Sparrow impresses with top-notch fruit, vegetable, coffee, and tea powders, combining exceptional quality.`
+      description: `Gold Sparrow impresses with top-notch fruit, vegetable, coffee, and tea powders, combining exceptional quality.`,
     },
     {
       image: require("../images/png/testimonial/testi3.png"),
@@ -251,17 +232,7 @@ const Home = () => {
   return (
     <div>
       <div>
-        <Slider {...bannerSetting}>
-          <div>
-            <img src={bannerImg} alt="banner" className="w-full" />
-          </div>
-          <div>
-            <img src={bannerImg} alt="banner" className="w-full" />
-          </div>
-          <div>
-            <img src={bannerImg} alt="banner" className="w-full" />
-          </div>
-        </Slider>
+        <img src={bannerImg} alt="banner" className="w-full" />
       </div>
       <div className="my-10 sm:my-14 md:my-20">
         <div className="relative font-rubik flex justify-center">
@@ -357,25 +328,12 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 my-10 md:my-20 px-10 md:px-20">
+      <div className="w-full justify-items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 my-10 md:my-20 px-10 md:px-20">
         {ProductData.slice(0, 4).map((product, ind) => (
           <div key={ind} className="lg:max-w-48">
             <img
-              src={product.img}
+              src={product.cardImage}
               alt={product.name}
-              className="w-full lg:w-48 rounded-2xl shadow-[rgba(0,0,0,0.25)_0px_0px_10px_2px]"
-            />
-            <div className="mt-6 flex gap-0.5">
-              <StarIcon className="w-3 h-3 text-[#FF972B]" />
-              <StarIcon className="w-3 h-3 text-[#FF972B]" />
-              <StarIcon className="w-3 h-3 text-[#FF972B]" />
-              <StarIcon className="w-3 h-3 text-[#FF972B]" />
-              <StarIcon className="w-3 h-3 text-[#FF972B]" />
-            </div>
-            <div className="capitalize text-sm text-[#626262] mt-2">
-              {product.name}
-            </div>
-            <div
               onClick={() => {
                 navigate(
                   `/products/${product.type}/${product.name
@@ -384,9 +342,17 @@ const Home = () => {
                 );
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
-              className="text-sm text-[#626262] mt-2 font-[Lora] text-center w-full rounded-xl border border-[#D9D9D9] p-2 cursor-pointer"
-            >
-              Quick View
+              className="w-full lg:w-48 cursor-pointer rounded-2xl shadow-[rgba(0,0,0,0.25)_0px_0px_10px_2px]"
+            />
+            <div className="mt-6 justify-center flex gap-0.5">
+              <StarIcon className="w-3 h-3 text-[#FF972B]" />
+              <StarIcon className="w-3 h-3 text-[#FF972B]" />
+              <StarIcon className="w-3 h-3 text-[#FF972B]" />
+              <StarIcon className="w-3 h-3 text-[#FF972B]" />
+              <StarIcon className="w-3 h-3 text-[#FF972B]" />
+            </div>
+            <div className="capitalize text-center text-sm text-[#626262] mt-2">
+              {product.name}
             </div>
           </div>
         ))}
@@ -404,7 +370,9 @@ const Home = () => {
               Deal of the day
             </p>
             <p className="text-xl font-rubik 2xl:text-2xl w-full text-center md:text-left md:w-2/4">
-            Today's exclusive deal: Elevate your kitchen with our premium food powder at an unbeatable price a daily delight for culinary enthusiasts and exporters alike!
+              Today's exclusive deal: Elevate your kitchen with our premium food
+              powder at an unbeatable price a daily delight for culinary
+              enthusiasts and exporters alike!
             </p>
             <p className="text-xl font-lora capitalize italic 2xl:text-2xl w-full text-center md:text-left md:w-3/4 font-semibold">
               beetroot powder
@@ -472,7 +440,8 @@ const Home = () => {
         </div>
         <div className="flex justify-center text-center w-full text-[#626262] mt-6 text-md md:text-lg md:mt-4">
           <span className="w-full md:w-2/4 capitalize font-rubik">
-          Hear what our satisfied customers are saying – testimonials that speak volumes about the exceptional quality and service we provide.
+            Hear what our satisfied customers are saying – testimonials that
+            speak volumes about the exceptional quality and service we provide.
           </span>
         </div>
       </div>
@@ -521,7 +490,8 @@ const Home = () => {
             </div>
             <div className="w-full text-center md:text-left">
               <p className="px-5 md:px-0 md:w-2/5 font-rubik">
-              Elevate your fitness journey with our natural, raw, and organic protein powders – the perfect blend for a healthier you.
+                Elevate your fitness journey with our natural, raw, and organic
+                protein powders – the perfect blend for a healthier you.
               </p>
             </div>
           </div>
@@ -535,7 +505,8 @@ const Home = () => {
                   Plant-based Proteins
                 </h2>
                 <p className="leading-relaxed font-rubik text-base md:w-2/5">
-                Fuel your vitality with our plant-based proteins, a natural choice for a healthier and sustainable lifestyle.
+                  Fuel your vitality with our plant-based proteins, a natural
+                  choice for a healthier and sustainable lifestyle.
                 </p>
               </div>
             </div>
@@ -548,13 +519,20 @@ const Home = () => {
                   mixability and texture
                 </h2>
                 <p className="leading-relaxed font-rubik text-base md:w-2/5">
-                Experience perfection in every sip with our protein powders, known for impeccable mixability and velvety-smooth texture.
+                  Experience perfection in every sip with our protein powders,
+                  known for impeccable mixability and velvety-smooth texture.
                 </p>
               </div>
             </div>
           </div>
           <div className="px-5 md:px-0">
-            <button className="capitalize font-rubik tracking-widest px-5 py-2 rounded-full font-semibold text-white bg-[#F1931F]">
+            <button
+              onClick={() => {
+                navigate("/products/all");
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+              className="capitalize font-rubik tracking-widest px-5 py-2 rounded-full font-semibold text-white bg-[#F1931F]"
+            >
               view more
             </button>
           </div>

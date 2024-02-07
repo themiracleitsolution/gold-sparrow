@@ -4,7 +4,7 @@ import Layout from "./components/Layout";
 import Products from "./components/Products";
 import AboutUs from "./components/AboutUs";
 import Contact from "./components/Contact";
-import Blog from "./components/Blog";
+// import Blog from "./components/Blog";
 import ProductDetails from "./components/ProductDetails";
 import "./App.css";
 function App() {
