@@ -204,7 +204,7 @@ const AboutUs = () => {
               Gold Sparrow International is a leading export company founded by Mr. Hardik Dhankecha in Surat, Gujarat, India with the objective of
               owning the tag of an ideal supplying company on a global platform.
             </p>
-            <p className="mb-8 leading-relaxed font-rubik text-[#626262]">
+            <p className="mb-8 leading-relaxed font-rubik text-[#626262] flex justify-end">
               Gold Sparrow International is also engaged in service the overseas buyers by delivering the cargo at their home port.we are acting
               as a represen tative for the setting-up business of our clients in india.in this way, our clients are getting
               the benefits of our experienced industry professionals in clinching the best deals with full compliance of their requirements.
