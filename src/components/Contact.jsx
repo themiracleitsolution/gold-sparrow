@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import bannerContact from "../images/png/contact/contact-banner.jpg";
 import mapContact from "../images/png/contact/map.jpg";
 import {
@@ -11,8 +11,6 @@ import { IconPhoneCall } from "@tabler/icons-react";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
-  const [bannerInd, setBannerInd] = useState(0);
-
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -37,7 +35,7 @@ const Contact = () => {
   return (
     <div className="space-y-20 mb-28">
       <div>
-        <img src={bannerContact} alt="banner w-full" />
+        <img className="w-full" src={bannerContact} alt="banner" />
       </div>
       <div className="px-10 lg:px-20 space-y-6">
         <div className="my-10  sm:my-14 md:my-20">

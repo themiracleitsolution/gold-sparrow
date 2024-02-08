@@ -52,18 +52,18 @@ const Footer = () => {
       );
   };
   return (
-    <div className="bg-[url('/public/footer-image.png')] bg-cover bg-center w-full pb-8 pt-10 ">
+    <div className="bg-[url('/public/footer-image.png')] bg-cover bg-center w-full pb-8 pt-10 px-4 sm:px-10 lg:px-20 ">
       <div className="border-b border-white ">
-        <div className="mx-10 lg:flex gap-10 my-8">
+        <div className="lg:flex justify-betweeen gap-40 my-8">
           <div className="w-full lg:w-1/2">
             <h2 className="capitalize font-semibold text-white text-lg">
               why people like us
             </h2>
-            <div className="capitalize my-6 text-white w-3/4 ">
-              Gold Sparrow International is a leading export company founded by
-              Mr. Hardik Dhankecha in Surat, Gujarat, India with the objective
-              of owning the tag of an ideal supplying company on a global
-              platform.
+            <div className="capitalize my-6 text-white w-5/5 text-justify">
+              Gold Sparrow International Is A Leading Export Company In Surat,
+              Gujarat, India With The Objective Of Owning The Tag Of An Ideal
+              Supplying Company Of Fruits, Vegetables, Tea And Coffee On A
+              Global Platform.
             </div>
             <form ref={form} onSubmit={sendEmail} className="w-full">
               <div className="relative">
@@ -87,12 +87,12 @@ const Footer = () => {
               </div>
             </form>
           </div>
-          <div className="w-full mt-5 sm:grid sm:grid-cols-2 lg:mt-0 md:flex">
-            <div className="w-full md:w-1/2">
+          <div className="w-full mt-5 gap-5 grid grid-cols-1 place-content-between sm:grid-cols-2 lg:mt-0 md:flex">
+            <div className="w-full md:w-1/4">
               <h2 className="capitalize font-semibold text-white text-lg">
                 information
               </h2>
-              <ul className="mt-3 md:mt-6 md:space-y-5">
+              <ul className="mt-2 md:mt-6 md:space-y-5">
                 <li>
                   <a className="capitalize transition text-white" href="/">
                     home
@@ -120,53 +120,52 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="w-full md:w-1/2">
+            {/* <div className="w-full md:w-1/2">
               <h2 className="capitalize font-semibold text-white text-lg">
                 our policies
               </h2>
-              <ul className="mt-3 md:mt-6 md:space-y-5">
+              <ul className="mt-2 md:mt-6 md:space-y-5">
                 <li>
-                  <a className="capitalize transition text-white" href="/">
+                  <a
+                    className="capitalize transition text-white"
+                    href="/privacy-policy"
+                  >
                     private policy
                   </a>
                 </li>
                 <li>
-                  <a className="capitalize transition text-white" href="/">
-                    Terms and Conditions
-                  </a>
-                </li>
-                <li>
-                  <a className="capitalize transition text-white" href="/">
+                  <a
+                    className="capitalize transition text-white"
+                    href="/refund-and-returns-policy"
+                  >
                     Refund and Returns Policy
                   </a>
                 </li>
-                <li>
-                  <a className="capitalize transition text-white" href="/">
-                    Payments & Returns
-                  </a>
-                </li>
               </ul>
-            </div>
-            <div className="w-full md:w-1/2">
+            </div> */}
+            <div className="w-full md:w-2/3">
               <h2 className="capitalize font-semibold text-white text-lg">
                 contact us
               </h2>
-              <ul className="my-3 md:mt-6 md:space-y-4">
+              <ul className="my-2 md:mt-6 md:space-y-4">
                 <li>
-                  <a className="capitalize transition text-white" href="/">
+                  <a
+                    className="capitalize transition text-white text-justify"
+                    href="/"
+                  >
                     <span className="capitalize text-lg font-semibold">
                       address :-
                     </span>{" "}
-                    420 , Times Trade Center, opp polaris, parvat patiya to vesu
-                    canal rd, surat - 395010
+                    420 , Times Trade Center, opp polaris, canal rd, surat -
+                    395010
                   </a>
                 </li>
                 <li>
-                  <a className="capitalize transition text-white" href="/">
+                  <a className="text-white" href="/">
                     <span className="capitalize text-lg font-semibold">
                       email :-
                     </span>{" "}
-                    Goldsparrowgloballlp@gmail.com
+                    goldsparrowgloballlp@gmail.com
                   </a>
                 </li>
                 <li>
@@ -197,20 +196,23 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="mt-8 mx-10 flex justify-center md:justify-between">
+      <div className="mt-8 flex flex-wrap gap-3 justify-center md:justify-between">
         <div className="font-rubik text-white">
           Copyright 2024 © Gold Sparrow
         </div>
         <div className="flex gap-3">
-          <p className="text-[#F1931F]  border-r-2 pr-3 font-semibold capitalize">
+          <a
+            className="text-[#F1931F] text-right border-r-2 pr-3 font-semibold capitalize"
+            href="/privacy-policy"
+          >
             privacy policy
-          </p>
-          <p className="text-white font-semibold border-r-2 pr-3 capitalize">
-            terms of use
-          </p>
-          <p className="text-white font-semibold capitalize">
-            sales and refuds
-          </p>
+          </a>
+          <a
+            className="text-white font-semibold pr-3 capitalize"
+            href="/refund-and-returns-policy"
+          >
+            Refund and Return Policy
+          </a>
         </div>
       </div>
     </div>

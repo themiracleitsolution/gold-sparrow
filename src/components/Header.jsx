@@ -19,11 +19,11 @@ const Header = () => {
   return (
     // <div className="sticky top-0 z-50 shadow-md">
     <div>
-      <div className="lg:flex bg-[#FFCF9F] p-4 w-full gap-2 justify-between items-center lg:px-20">
+      <div className="lg:flex bg-[#FFCF9F] px-4 w-full gap-2 justify-between items-center lg:px-20">
         <div className="flex justify-between items-center lg:block">
-          <div className="h-full py-1">
+          <div className="h-full">
             <Link to="/">
-              <img src={logoPng} alt="logo" className="w-24" />
+              <img src={logoPng} alt="logo" className="w-20" />
             </Link>
           </div>
           <div className="">
@@ -61,16 +61,16 @@ const Header = () => {
                 VEGETABLES
               </Link>
               <Link
+                to="/products/fruits"
+                className="py-2 block my-1 font-semibold text-[#F1931F] hover:text-white hover:bg-[#F1931F] md:px-4"
+              >
+                FRUITS
+              </Link>
+              <Link
                 to="/products/tea"
                 className="py-2 block my-1 font-semibold text-[#F1931F] hover:text-white hover:bg-[#F1931F] md:px-4"
               >
                 TEA
-              </Link>
-              <Link
-                to="/products/fruits"
-                className="py-2 block my-1 font-semibold text-[#F1931F] hover:text-white hover:bg-[#F1931F] md:px-4"
-              >
-                FRUIT
               </Link>
               <Link
                 to="/products/coffee"

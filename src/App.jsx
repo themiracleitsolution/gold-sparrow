@@ -7,6 +7,8 @@ import Contact from "./components/Contact";
 // import Blog from "./components/Blog";
 import ProductDetails from "./components/ProductDetails";
 import "./App.css";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import RefundAndReturnsPolicy from "./components/RefundAndReturnsPolicy";
 function App() {
   return (
     <BrowserRouter>
@@ -59,6 +61,22 @@ function App() {
             </Layout>
           }
         /> */}
+        <Route
+          path="/privacy-policy"
+          element={
+            <Layout>
+              <PrivacyPolicy />
+            </Layout>
+          }
+        />
+        <Route
+          path="/refund-and-returns-policy"
+          element={
+            <Layout>
+              <RefundAndReturnsPolicy />
+            </Layout>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );

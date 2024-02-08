@@ -125,7 +125,12 @@ const ProductDetails = () => {
                 {product.name}
               </div>
             </div>
-            <div className=" font-lora italic">{product.content}</div>
+            {/* <div className=" font-lora italic text-justify">{product.content}</div> */}
+            <div className=" font-lora text-justify italic">
+          {product.content.map((item, ind) => (
+            <p key={ind}>{item}<br></br><br></br></p>
+          ))}
+        </div>
             <div
               className="px-6 font-lora italic font-[600] cursor-pointer bg-black rounded-full py-2 w-fit text-white"
               onClick={() => setEnquiryPopUp(true)}
@@ -137,7 +142,7 @@ const ProductDetails = () => {
         <div className="border-l-2 italic font-[600] font-lora border-[#F1931F] pl-4 text-2xl sm:text-3xl text-black">
           Description
         </div>
-        <div className="font-lora italic">
+        <div className=" font-lora text-justify italic">
           {product.description.map((item, ind) => (
             <p key={ind}>{item}</p>
           ))}
@@ -155,14 +160,14 @@ const ProductDetails = () => {
                   <div className="flex justify-center w-full mt-4">
                     <div className="md:max-w-48">
                       <img
-                      onClick={() => {
-                        navigate(
-                          `/products/${product.type}/${product.name
-                            .toLowerCase()
-                            .replaceAll(" ", "-")}`
-                        );
-                        window.scrollTo({ top: 0, behavior: "smooth" });
-                      }}
+                        onClick={() => {
+                          navigate(
+                            `/products/${product.type}/${product.name
+                              .toLowerCase()
+                              .replaceAll(" ", "-")}`
+                          );
+                          window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
                         src={product.cardImage}
                         alt={product.name}
                         className="w-full md:w-48 rounded-2xl shadow-[rgba(0,0,0,0.25)_0px_0px_10px_2px]"
@@ -204,26 +209,27 @@ const ProductDetails = () => {
             className="fixed w-screen h-screen bg-black/25 top-0 left-0 flex items-center z-40"
             onClick={() => setEnquiryPopUp(false)}
           ></div>
-          <div className="fixed w-screen h-screen bg-black/25 top-0 left-0 flex items-center z-40 pointer-events-none">
-            <div className="w-full bg-white p-10 pointer-events-auto space-y-5">
+          <div className="fixed flex justify-center w-screen h-screen bg-black/25 top-0 left-0 items-center z-40 pointer-events-none">
+            <div className="w-full md:w-4/6 lg:w-2/4 bg-white p-10 pointer-events-auto space-y-5">
+              <div className="w-full text-center">
+                <div className="capitalize pr-4 text-[#F1931F] text-3xl sm:text-4xl lg:text-6xl font-rubik font-[700] space-y-2">
+                  <div>{product.name}</div>
+                </div>
+              </div>
               <div className="relative flex justify-center">
-                <div className="uppercase tracking-widest font-rubik font-[700] text-[#5252521A] text-5xl sm:text-6xl md:text-8xl">
+                <div className="uppercase tracking-widest font-rubik font-[700] text-[#5252521A] text-5xl lg:text-7xl">
                   ENQUIRY
                 </div>
-                <div className="absolute my-3 md:my-5 w-full flex justify-center top-0 capitalize tracking-normal md:tracking-widest font-rubik font-[700] text-2xl sm:text-4xl md:text-6xl">
+                <div className="absolute my-1 lg:my-5 w-full flex justify-center top-0 capitalize tracking-normal md:tracking-widest font-rubik font-[700] text-3xl lg:text-5xl">
                   ENQUIRY
                 </div>
               </div>
-              <div className="flex flex-wrap lg:flex-nowrap gap-5 px-10 lg:px-20">
-                <div className="w-full lg:w-1/3">
-                  <div className="border-r pr-4 border-dashed border-[#F1931F] text-[#F1931F] text-2xl sm:text-4xl lg:text-6xl font-rubik font-[700] space-y-2">
-                    <div>{product.name}</div>
-                  </div>
-                </div>
+              <div className="flex flex-wrap lg:flex-nowrap gap-5 ">
+
                 <form
                   ref={form}
                   onSubmit={sendEmail}
-                  className="w-full lg:pl-8 flex flex-col gap-4 items-center"
+                  className="w-full flex flex-col gap-4 items-center"
                 >
                   <input
                     type="text"

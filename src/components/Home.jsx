@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import bannerImg from "../images/png/home-banner.png";
+import bannerImg1 from "../images/png/home-banner1.jpg";
+import bannerImg2 from "../images/png/home-banner2.jpg";
+import bannerImg3 from "../images/png/home-banner3.jpg";
+import bannerImg4 from "../images/png/home-banner4.jpg";
 import firstImg from "../images/png/products/1.png";
 import secondImg from "../images/png/products/2.png";
 import thirdImg from "../images/png/products/3.png";
@@ -63,6 +66,25 @@ const Home = () => {
       },
     ],
   };
+  var bannerSetting = {
+    dots: true,
+    infinite: false,
+    arrows: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    afterChange: (current) => setBannerInd(current),
+    appendDots: (dots) => (
+      <div className="!relative">
+        <ul className="absolute bottom-5 md:bottom-8 flex justify-center w-full">
+          {dots}
+        </ul>
+      </div>
+    ),
+    customPaging: (i) => (
+      <div className={`ind ${bannerInd === i ? "active" : ""}`}></div>
+    ),
+  };
   var certificateSetting = {
     dots: true,
     infinite: false,
@@ -118,32 +140,32 @@ const Home = () => {
     {
       image: require("../images/png/exlusive-product/peach.png"),
       name: "peach",
-      link: "/products/fruits/spray-dried-peach-powder",
+      link: "/products/fruits/peach",
     },
     {
-      image: require("../images/png/exlusive-product/grape.png"),
-      name: "grape",
-      link: "/products/fruits/spray-dried-black-grape-powder",
+      image: require("../images/png/exlusive-product/dragonfruit.png"),
+      name: "Dragon Fruit",
+      link: "/products/fruits/dragon-fruit",
     },
     {
-      image: require("../images/png/exlusive-product/pineapple.png"),
-      name: "pineapple",
-      link: "/products/fruits/spray-dried-pineapple-powder",
+      image: require("../images/png/exlusive-product/strawberry.png"),
+      name: "Strawberry",
+      link: "/products/fruits/strawberry",
     },
     {
-      image: require("../images/png/exlusive-product/orange.png"),
-      name: "orange",
-      link: "/products/fruits/spray-dried-orange-powder",
+      image: require("../images/png/exlusive-product/kiwi.png"),
+      name: "kiwi",
+      link: "/products/fruits/kiwi",
     },
     {
-      image: require("../images/png/exlusive-product/apple.png"),
-      name: "apple",
-      link: "/products/fruits/spray-dried-apple-powder",
+      image: require("../images/png/exlusive-product/lychee.png"),
+      name: "lychee",
+      link: "/products/fruits/lychee",
     },
     {
-      image: require("../images/png/exlusive-product/tomato.png"),
-      name: "papaya",
-      link: "/products/fruits/spray-dried-papaya-powder",
+      image: require("../images/png/exlusive-product/passionfruit.png"),
+      name: "passion fruit",
+      link: "/products/fruits/passion-fruit",
     },
   ];
   const services = [
@@ -232,11 +254,25 @@ const Home = () => {
   return (
     <div>
       <div>
-        <img src={bannerImg} alt="banner" className="w-full" />
+        <Slider {...bannerSetting}>
+          <div>
+            <img src={bannerImg1} alt="banner" className="w-full" />
+          </div>
+          <div>
+            <img src={bannerImg2} alt="banner" className="w-full" />
+          </div>
+          <div>
+            <img src={bannerImg3} alt="banner" className="w-full" />
+          </div>
+          <div>
+            <img src={bannerImg4} alt="banner" className="w-full" />
+          </div>
+        </Slider>
+        {/* <img src={bannerImg} alt="banner" className="w-full" /> */}
       </div>
       <div className="my-10 sm:my-14 md:my-20">
         <div className="relative font-rubik flex justify-center">
-          <div className="uppercase tracking-wider text-[#5252521A] font-[700] text-3xl sm:text-4xl md:text-6xl">
+          <div className="uppercase tracking-wider text-[#5252521A] font-[700] text-2xl sm:text-4xl md:text-6xl">
             exclusive product
           </div>
           <div className="absolute my-1 md:my-3 w-full flex justify-center top-0 capitalize tracking-normal md:tracking-widest font-[700] text-xl sm:text-2xl md:text-4xl">
@@ -251,7 +287,7 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-6 mg:mx-10 justify-items-center">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 md:mx-10 justify-items-center">
         {products.map((item, ind) => (
           <div
             key={ind}
@@ -313,7 +349,7 @@ const Home = () => {
           Featured Products
         </div>
         <div className="relative mt-4 flex justify-center">
-          <div className="uppercase font-rubik font-[600] tracking-wider text-[#5252521A] text-3xl sm:text-4xl md:text-6xl">
+          <div className="uppercase font-rubik font-[600] tracking-wider text-[#5252521A] text-2xl sm:text-4xl md:text-6xl">
             featured product
           </div>
           <div className="absolute font-rubik font-[600] my-1 md:my-3 w-full flex justify-center top-0 capitalize tracking-normal md:tracking-widest text-xl sm:text-2xl md:text-4xl">
@@ -370,26 +406,26 @@ const Home = () => {
               Deal of the day
             </p>
             <p className="text-xl font-rubik 2xl:text-2xl w-full text-center md:text-left md:w-2/4">
-              Today's exclusive deal: Elevate your kitchen with our premium food
-              powder at an unbeatable price a daily delight for culinary
+              Today's exclusive deal: Elevate your kitchen with our premium
+              fruits powder at an unbeatable price a daily delight for culinary
               enthusiasts and exporters alike!
             </p>
             <p className="text-xl font-lora capitalize italic 2xl:text-2xl w-full text-center md:text-left md:w-3/4 font-semibold">
-              beetroot powder
+              Fresh Fruits
             </p>
 
             <div className="flex justify-between md:justify-normal md:gap-10">
               <div className="text-center font-lora italic font-[600] text-xl md:text-xl 2xl:text-4xl">
-                0<p className="capitalize">days</p>
+                10<p className="capitalize">days</p>
               </div>
               <div className="text-center font-lora italic font-[600] text-xl md:text-xl 2xl:text-4xl">
-                0<p className="capitalize">hours</p>
+                05<p className="capitalize">hours</p>
               </div>
               <div className="text-center font-lora italic font-[600] text-xl md:text-xl 2xl:text-4xl">
-                0<p className="capitalize">minutes</p>
+                02<p className="capitalize">minutes</p>
               </div>
               <div className="text-center font-lora italic font-[600] text-xl md:text-xl 2xl:text-4xl">
-                0<p className="capitalize">seconds</p>
+                40<p className="capitalize">seconds</p>
               </div>
             </div>
           </div>
