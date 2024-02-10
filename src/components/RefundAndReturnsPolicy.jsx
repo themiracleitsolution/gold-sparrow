@@ -1,9 +1,11 @@
 import React from "react";
 import {Helmet} from "react-helmet";
+import Loader from "./Loader";
 
 const RefundAndReturnsPolicy = () => {
   return (
     <div className="px-4 sm:px-10 lg:px-20 my-8 space-y-4 text-base text-[#777]">
+      <Loader/>
             <Helmet>
   <meta charSet="utf-8" />
   <title>Refund and Returns Policy | Your Satisfaction Guaranteed - Gold Sparrow Global</title>
