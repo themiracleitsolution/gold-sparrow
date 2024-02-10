@@ -9,9 +9,11 @@ import ProductDetails from "./components/ProductDetails";
 import "./App.css";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import RefundAndReturnsPolicy from "./components/RefundAndReturnsPolicy";
+import Loader from "./components/Loader";
 function App() {
   return (
     <BrowserRouter>
+    <Loader  />
       <Routes>
         <Route
           path="/"

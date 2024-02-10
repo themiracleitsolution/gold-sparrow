@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import aboutUs from "../images/png/about-us.png";
 import aboutBanner from "../images/png/about-banner.png";
 import {Helmet} from "react-helmet";
-
+import Loader from "./Loader";
 
 const AboutUs = () => {
   const [currentInd, setCurrentInd] = useState(0);
@@ -180,6 +180,8 @@ const AboutUs = () => {
   ];
   return (
     <div>
+    
+    <Loader/>
         <Helmet>
              <meta charSet="utf-8" />
              <title>About Us | Our Story, Values, and Mission - Gold Sparrow Global</title>

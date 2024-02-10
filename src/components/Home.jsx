@@ -20,6 +20,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {Helmet} from "react-helmet";
+import Loader from "./Loader";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -255,7 +256,8 @@ const Home = () => {
   ];
   return (
     <div>
-      
+
+    <Loader  />      
       <Helmet>
              <meta charSet="utf-8" />
              <title>Gold Sparrow Global | Top Quality Fruits Exporter in India [Fresh Fruits]</title>

@@ -11,6 +11,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { IconPhoneCall } from "@tabler/icons-react";
 import emailjs from "emailjs-com";
+import Loader from "./Loader";
 
 const Contact = () => {
   const form = useRef();
@@ -36,6 +37,7 @@ const Contact = () => {
   };
   return (
     <div className="space-y-20 mb-28">
+      <Loader/>
         <Helmet>
   <meta charSet="utf-8" />
   <title>Contact Us | Reach Out to Us Today - Gold Sparrow Global</title>

@@ -10,6 +10,7 @@ import bannerFruits from "../images/png/Products_Fruits.png";
 import bannerTea from "../images/png/Products_Tea.png";
 import bannerCoffee from "../images/png/Products_Coffee.png";
 import {Helmet} from "react-helmet";
+import Loader from "./Loader";
 
 const Products = () => {
   const navigate = useNavigate();
@@ -22,6 +23,7 @@ const Products = () => {
   );
   return (
     <div className="space-y-20 mb-20">
+      <Loader/>
          <Helmet>
   <meta charSet="utf-8" />
   <title>Fresh Products Exported by Gold Sparrow Global</title>
