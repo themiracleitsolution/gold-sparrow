@@ -154,8 +154,8 @@ const Footer = () => {
                     href="/"
                   >
                     <span className="capitalize text-lg font-semibold">
-                      address :-
-                    </span>{" "}
+                      address :
+                    </span>{" "}<br></br>
                     420 , Times Trade Center, opp polaris, canal rd, surat -
                     395010
                   </a>
@@ -163,16 +163,16 @@ const Footer = () => {
                 <li>
                   <a className="text-white" href="/">
                     <span className="capitalize text-lg font-semibold">
-                      email :-
-                    </span>{" "}
+                      email :
+                    </span>{" "}<br></br>
                     goldsparrowgloballlp@gmail.com
                   </a>
                 </li>
                 <li>
                   <a className="capitalize transition text-white" href="/">
                     <span className="capitalize text-lg font-semibold">
-                      phone :-
-                    </span>{" "}
+                      phone :
+                    </span>{" "}<br></br>
                     +91 93277 04700
                   </a>
                 </li>

@@ -4,22 +4,40 @@ import React, { useState } from "react";
 import { ProductData } from "../data/product";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import ProductBanner from "../images/png/products/product-banner.jpg";
-import bannerAll from "../images/png/products/product-all-banner.jpg";
+import bannerAll from "../images/png/Products_All.png";
+import bannerVegetables from "../images/png/Products_Vegetables.png";
+import bannerFruits from "../images/png/Products_Fruits.png";
+import bannerTea from "../images/png/Products_Tea.png";
+import bannerCoffee from "../images/png/Products_Coffee.png";
 
 const Products = () => {
   const navigate = useNavigate();
   const { tab } = useParams();
-  const activeTab = tab;
   const [search, setSearch] = useState("");
   const filteredProducts = ProductData.filter(
     (v) =>
-      (v.type.includes(activeTab) || activeTab === "all") &&
+      (v.type.includes(tab) || tab === "all") &&
       v.name.toLowerCase().includes(search.toLowerCase())
   );
   return (
     <div className="space-y-20 mb-20">
-      <div>
-        <img className="w-full" src={bannerAll} alt="banner" />
+      <div className="relative">
+        {tab === "all" ? (
+          <img className="w-full" src={bannerAll} alt="banner" />
+        ) : tab === "vegetables" ? (
+          <img className="w-full" src={bannerVegetables} alt="banner" />
+        ) : tab === "fruits" ? (
+          <img className="w-full" src={bannerFruits} alt="banner" />
+        ) : tab === "tea" ? (
+          <img className="w-full" src={bannerTea} alt="banner" />
+        ) : (
+          <img className="w-full" src={bannerCoffee} alt="banner" />
+        )}
+        <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center text-white bg-black/60 gap-4 text-2xl md:text-4xl lg:text-5xl font-bold capitalize">
+          <span>Home</span>
+          <span>{">"}</span>
+            <span className="text-[#F1931F]">{tab === "all" ? "products" : tab}</span>
+        </div>
       </div>
       <div className="px-10 lg:px-20 space-y-14">
         <div className="flex flex-col items-center w-full gap-6">
@@ -37,7 +55,7 @@ const Products = () => {
             <Link
               to="/products/all"
               className={`px-4 font-lora font-[600] cursor-pointer font-serif italic ${
-                activeTab === "all"
+                tab === "all"
                   ? "rounded-full text-white bg-[#F1931F]"
                   : "text-[#F1931F]"
               }`}
@@ -47,7 +65,7 @@ const Products = () => {
             <Link
               to="/products/vegetables"
               className={`px-4 font-lora font-[600] cursor-pointer font-serif italic ${
-                activeTab === "vegetables"
+                tab === "vegetables"
                   ? "rounded-full text-white bg-[#F1931F]"
                   : "text-[#F1931F]"
               }`}
@@ -57,7 +75,7 @@ const Products = () => {
             <Link
               to="/products/fruits"
               className={`px-4 font-lora font-[600] cursor-pointer font-serif italic ${
-                activeTab === "fruits"
+                tab === "fruits"
                   ? "rounded-full text-white bg-[#F1931F]"
                   : "text-[#F1931F]"
               }`}
@@ -67,7 +85,7 @@ const Products = () => {
             <Link
               to="/products/tea"
               className={`px-4 font-lora font-[600] cursor-pointer font-serif italic ${
-                activeTab === "tea"
+                tab === "tea"
                   ? "rounded-full text-white bg-[#F1931F]"
                   : "text-[#F1931F]"
               }`}
@@ -77,7 +95,7 @@ const Products = () => {
             <Link
               to="/products/coffee"
               className={`px-4 font-lora font-[600] cursor-pointer font-serif italic ${
-                activeTab === "coffee"
+                tab === "coffee"
                   ? "rounded-full text-white bg-[#F1931F]"
                   : "text-[#F1931F]"
               }`}
@@ -89,7 +107,7 @@ const Products = () => {
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
           {filteredProducts.length ? (
             filteredProducts.map((product, ind) => {
-              if (activeTab === "all" && ind > 7) return null;
+              // if (tab === "all" && ind > 7) return null;
               return (
                 <div key={ind} className="md:max-w-48">
                   <img
@@ -133,9 +151,11 @@ const Products = () => {
             })
           ) : (
             <div className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4 w-full text-[#626262] text-center font-lora font-bold italic text-2xl">
-              <br></br><br></br>
+              <br></br>
+              <br></br>
               Coming Soon...
-              <br></br><br></br>
+              <br></br>
+              <br></br>
             </div>
           )}
         </div>
