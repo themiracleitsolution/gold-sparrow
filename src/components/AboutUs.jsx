@@ -5,6 +5,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import aboutUs from "../images/png/about-us.png";
 import aboutBanner from "../images/png/about-banner.png";
+import {Helmet} from "react-helmet";
+
 
 const AboutUs = () => {
   const [currentInd, setCurrentInd] = useState(0);
@@ -178,6 +180,10 @@ const AboutUs = () => {
   ];
   return (
     <div>
+        <Helmet>
+             <meta charSet="utf-8" />
+             <title>About Us | Our Story, Values, and Mission - Gold Sparrow Global</title>
+         </Helmet>
       <div>
         <img className="w-full" src={aboutBanner} alt="banner" />
       </div>
@@ -198,13 +204,12 @@ const AboutUs = () => {
               Welcome to gold sparrow
             </h1>
             <p className="mb-8 leading-relaxed font-rubik text-[#626262] text-justify">
-              Gold Sparrow International is a leading export company founded by
-              Mr. Hardik Dhankecha in Surat, Gujarat, India with the objective
+              Gold Sparrow Global is a leading export company in Surat, Gujarat, India with the objective
               of owning the tag of an ideal supplying company on a global
               platform.
             </p>
             <p className="mb-8 leading-relaxed font-rubik text-[#626262] text-justify">
-              Gold Sparrow International is also engaged in service the overseas
+              Gold Sparrow Global is also engaged in service the overseas
               buyers by delivering the cargo at their home port.we are acting as
               a represen tative for the setting-up business of our clients in
               india.in this way, our clients are getting the benefits of our
@@ -215,11 +220,11 @@ const AboutUs = () => {
               Our business has been inspired by the government initiative and
               vision towards ‘helping the import-export sector’ to reach new
               heights of success and appreciation. While innovation forms the
-              essence of every creation at Gold Sparrow International, we ensure
+              essence of every creation at Gold Sparrow Global, we ensure
               that we don’t compromise on quality.
             </p>
             <p className="mb-8 leading-relaxed font-rubik text-[#626262] text-justify">
-              In all nations, Gold Sparrow International enjoys priority access
+              In all nations, Gold Sparrow Global enjoys priority access
               to the export. We guarantee to accomplish your task, whether it’s
               in Europe, the Middle East, the United States, or wherever else
               you wish to export your food we serve it all. Gold Sparrow
@@ -309,7 +314,7 @@ const AboutUs = () => {
         </div>
         <div className="flex justify-center font-rubik font-[500] text-center w-full text-[#626262] mt-6 text-md md:text-lg md:mt-4">
           <span className="w-full md:w-2/3 capitalize">
-            We are delighted to share with you that Gold Sparrow International
+            We are delighted to share with you that Gold Sparrow Global
             has obtained certification by the government of India that it
             complies with the following requirements and has been authorized to
             export our high-quality products across the globe. Therefore, book

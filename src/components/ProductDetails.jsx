@@ -10,6 +10,7 @@ import {
   ChevronDoubleRightIcon,
 } from "@heroicons/react/24/outline";
 import emailjs from "emailjs-com";
+import {Helmet} from "react-helmet";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -105,6 +106,10 @@ const ProductDetails = () => {
   return (
     <>
       <div className="px-10 lg:px-20 py-16 space-y-10 text-base sm:text-lg text-[#626262]">
+      <Helmet>
+  <meta charSet="utf-8" />
+  <title>Fresh Fruits and Vegetables Details Exported by Gold Sparrow Global</title>
+</Helmet>
         <div className="flex flex-wrap lg:flex-nowrap gap-5 w-full">
           <div className="w-full lg:pr-6">
             <img src={product.img} alt={product.name} className="w-full" />

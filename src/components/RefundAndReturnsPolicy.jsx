@@ -1,8 +1,13 @@
 import React from "react";
+import {Helmet} from "react-helmet";
 
 const RefundAndReturnsPolicy = () => {
   return (
     <div className="px-4 sm:px-10 lg:px-20 my-8 space-y-4 text-base text-[#777]">
+            <Helmet>
+  <meta charSet="utf-8" />
+  <title>Refund and Returns Policy | Your Satisfaction Guaranteed - Gold Sparrow Global</title>
+</Helmet>
       <p className="text-[#555] text-2xl font-bold">Overview</p>
       <p>
         Our refund and returns policy lasts 30 days. If 30 days have passed

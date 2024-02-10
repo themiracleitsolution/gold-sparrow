@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import bannerContact from "../images/png/contact/contact-banner.jpg";
 import mapContact from "../images/png/contact/map.jpg";
+import {Helmet} from "react-helmet";
+
 import {
   ChevronRightIcon,
   EnvelopeIcon,
@@ -34,6 +36,10 @@ const Contact = () => {
   };
   return (
     <div className="space-y-20 mb-28">
+        <Helmet>
+  <meta charSet="utf-8" />
+  <title>Contact Us | Reach Out to Us Today - Gold Sparrow Global</title>
+</Helmet>
       <div>
         <img className="w-full" src={bannerContact} alt="banner" />
       </div>

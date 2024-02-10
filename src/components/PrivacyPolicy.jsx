@@ -1,8 +1,14 @@
 import React from "react";
+import {Helmet} from "react-helmet";
 
 const PrivacyPolicy = () => {
   return (
     <div className="px-4 sm:px-10 lg:px-20 my-8 space-y-4">
+      
+      <Helmet>
+  <meta charSet="utf-8" />
+  <title>Privacy Policy | Your Information Security Matters to Us - Gold Sparrow Global</title>
+</Helmet>
       <p className="text-[#555] text-2xl font-bold">Who we are</p>
       <p className="text-base text-[#777]">
         <span className="font-bold">Suggested text:</span> Our website address

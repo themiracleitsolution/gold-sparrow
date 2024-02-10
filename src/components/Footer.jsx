@@ -60,7 +60,7 @@ const Footer = () => {
               why people like us
             </h2>
             <div className="capitalize my-6 text-white w-5/5 text-justify">
-              Gold Sparrow International Is A Leading Export Company In Surat,
+             Gold Sparrow Global Is A Leading Export Company In Surat,
               Gujarat, India With The Objective Of Owning The Tag Of An Ideal
               Supplying Company Of Fruits, Vegetables, Tea And Coffee On A
               Global Platform.
@@ -99,22 +99,22 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a className="capitalize transition text-white" href="/">
+                  <a className="capitalize transition text-white" href="/about-us">
                     about us
                   </a>
                 </li>
                 <li>
-                  <a className="capitalize transition text-white" href="/">
+                  <a className="capitalize transition text-white" href="/blog">
                     blog
                   </a>
                 </li>
                 <li>
-                  <a className="capitalize transition text-white" href="/">
+                  <a className="capitalize transition text-white" href="/contact">
                     contact
                   </a>
                 </li>
                 <li>
-                  <a className="capitalize transition text-white" href="/">
+                  <a className="capitalize transition text-white" href="/products/all">
                     products
                   </a>
                 </li>

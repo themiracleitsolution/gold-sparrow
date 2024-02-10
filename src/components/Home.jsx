@@ -19,6 +19,8 @@ import { Link, useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import {Helmet} from "react-helmet";
+
 const Home = () => {
   const navigate = useNavigate();
   const [currentInd, setCurrentInd] = useState(0);
@@ -253,6 +255,11 @@ const Home = () => {
   ];
   return (
     <div>
+      
+      <Helmet>
+             <meta charSet="utf-8" />
+             <title>Gold Sparrow Global | Top Quality Fruits Exporter in India [Fresh Fruits]</title>
+         </Helmet>
       <div>
         <Slider {...bannerSetting}>
           <div>
@@ -445,7 +452,7 @@ const Home = () => {
         </div>
         <div className="flex justify-center text-center w-full text-[#626262] mt-6 text-md md:text-lg md:mt-4">
           <span className="w-full md:w-2/4 capitalize font-rubik">
-            Gold Sparrow International works to earn the trust of its customers
+            Gold Sparrow Global works to earn the trust of its customers
             by offering them high-quality goods at reasonable prices
           </span>
         </div>
@@ -588,7 +595,7 @@ const Home = () => {
         </div>
         <div className="flex justify-center font-rubik font-[500] text-center w-full text-[#626262] mt-6 text-md md:text-lg md:mt-4">
           <span className="w-full md:w-2/3 capitalize">
-            We are delighted to share with you that Gold Sparrow International
+            We are delighted to share with you that Gold Sparrow Global
             has obtained certification by the government of India that it
             complies with the following requirements and has been authorized to
             export our high-quality products across the globe. Therefore, book

@@ -11,6 +11,7 @@ import {
   IconMailFilled,
 } from "@tabler/icons-react";
 import { Link, useLocation } from "react-router-dom";
+import {Helmet} from "react-helmet";
 
 const Header = () => {
   const [sidebar, setSidebar] = useState(false);
@@ -19,6 +20,10 @@ const Header = () => {
   return (
     // <div className="sticky top-0 z-50 shadow-md">
     <div>
+       <Helmet>
+  <meta charSet="utf-8" />
+  <title>Fresh Products Exported by Gold Sparrow Global</title>
+</Helmet>
       <div className="lg:flex bg-[#FFCF9F] px-4 w-full gap-2 justify-between items-center lg:px-20">
         <div className="flex justify-between items-center lg:block">
           <div className="h-full">
