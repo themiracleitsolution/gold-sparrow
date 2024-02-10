@@ -99,22 +99,22 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a className="capitalize transition text-white" href="/about-us">
+                  <a className="capitalize transition text-white" href="/">
                     about us
                   </a>
                 </li>
                 <li>
-                  <a className="capitalize transition text-white" href="/blog">
+                  <a className="capitalize transition text-white" href="/">
                     blog
                   </a>
                 </li>
                 <li>
-                  <a className="capitalize transition text-white" href="/contact">
+                  <a className="capitalize transition text-white" href="/">
                     contact
                   </a>
                 </li>
                 <li>
-                  <a className="capitalize transition text-white" href="/products/all">
+                  <a className="capitalize transition text-white" href="/">
                     products
                   </a>
                 </li>
