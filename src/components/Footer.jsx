@@ -151,28 +151,38 @@ const Footer = () => {
                 <li>
                   <a
                     className="capitalize transition text-white text-justify"
-                    href="/"
+                    href="https://www.google.com/maps/search/420+,+Times+Trade+Center,+Opp+Polaris,+Canal+Rd,+Surat+-+395010/@21.1970786,72.8724897,17z/data=!3m1!4b1?entry=ttu"
+                    target="_blank"
                   >
                     <span className="capitalize text-lg font-semibold">
                       address :
-                    </span>{" "}<br></br>
+                    </span>{" "}
+                    <br></br>
                     420 , Times Trade Center, opp polaris, canal rd, surat -
                     395010
                   </a>
                 </li>
                 <li>
-                  <a className="text-white" href="/">
+                  <a
+                    className="text-white"
+                    href="mailto:support@goldsparrow.co"
+                  >
                     <span className="capitalize text-lg font-semibold">
                       email :
-                    </span>{" "}<br></br>
+                    </span>{" "}
+                    <br></br>
                     goldsparrowgloballlp@gmail.com
                   </a>
                 </li>
                 <li>
-                  <a className="capitalize transition text-white" href="/">
+                  <a
+                    className="capitalize transition text-white"
+                    href="tel:+919327704700"
+                  >
                     <span className="capitalize text-lg font-semibold">
                       phone :
-                    </span>{" "}<br></br>
+                    </span>{" "}
+                    <br></br>
                     +91 93277 04700
                   </a>
                 </li>
@@ -205,7 +215,7 @@ const Footer = () => {
             className="text-[#F1931F] text-right border-r-2 pr-3 font-semibold capitalize"
             href="/privacy-policy"
           >
-            privacy policy
+            Privacy Policy
           </a>
           <a
             className="text-white font-semibold pr-3 capitalize"
