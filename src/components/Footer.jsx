@@ -12,11 +12,11 @@ import emailjs from "emailjs-com";
 const socialMedia = [
   {
     icon: IconBrandInstagram,
-    href: "https://www.instagram.com/goldsparrowinternational/",
+    href: "https://www.instagram.com/goldsparrowglobal/",
   },
   {
     icon: IconBrandFacebookFilled,
-    href: "https://www.facebook.com/goldsparrowinternational",
+    href: "https://www.facebook.com/profile.php?id=61556896196768",
   },
   { icon: IconMailFilled, href: "mailto:support@goldsparrow.co" },
   { icon: IconBrandTwitterFilled, href: "https://twitter.com/GoldSparrowInt" },
