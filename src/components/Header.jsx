@@ -114,7 +114,7 @@ const Header = () => {
           <a
             className="cursor-pointer"
             target="_blank"
-            href="https://www.instagram.com/goldsparrowinternational/"
+            href="https://www.instagram.com/goldsparrowglobal/"
             rel="noreferrer"
           >
             <div className="bg-[#F1931F] p-1 rounded-full">
@@ -124,7 +124,7 @@ const Header = () => {
           <a
             className="cursor-pointer"
             target="_blank"
-            href="https://www.facebook.com/goldsparrowinternational"
+            href="https://www.facebook.com/profile.php?id=61556896196768"
             rel="noreferrer"
           >
             <div className="bg-[#F1931F] p-1 rounded-full">
